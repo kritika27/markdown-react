@@ -1,0 +1,36 @@
+/*Navbar*/
+
+ul{
+    list-style: none;
+}
+#nav{
+    color:#fff;
+    background-color: #000;
+    overflow:auto;
+    padding:15px;
+}
+.container{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    margin:auto;  
+}
+#nav ul{
+    display:flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+li{
+    margin-left:10px;
+    font-size: 18px;
+}
+.logo{
+    color:orange;
+    font-weight: bold;
+    font-family: cursive;
+}
+#nav ul li:hover{
+    color:orange;
+}
+
