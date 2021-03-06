@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import ReactMarkdown from "react-markdown";
+import Navbar from "./components/Navbar/Navbar";
+import "./index.css";
 
-function App() {
+export default function App() {
+  const [markdown, setMarkdown] = useState("# Markdown");
+
+  const handleChange = (e) => {
+    setMarkdown(e.target.value);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <Navbar />
+      <header>
+        <div className="row">
+          <div className="column">
+            <div className="column1">
+              <textarea value={markdown} onChange={handleChange}></textarea>
+            </div>
+          </div>
+          <div className="column">
+            <div className="column2">
+              <ReactMarkdown>{markdown}</ReactMarkdown>
+            </div>
+          </div>
+        </div>
       </header>
     </div>
   );
 }
-
-export default App;
